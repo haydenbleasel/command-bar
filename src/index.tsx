@@ -37,8 +37,12 @@ export const useCommandBar = create<{
       const allElements = document.querySelectorAll('[cmdk-item]');
       const element = allElements[newIndex] as HTMLElement | undefined;
 
-      if (newIndex < 0 || newIndex >= allElements.length) {
-        return { index: state.index };
+      if (newIndex < 0) {
+        return { index: 0 };
+      }
+
+      if (newIndex >= allElements.length) {
+        return { index: allElements.length - 1 };
       }
 
       if (element) {
@@ -174,6 +178,8 @@ const Dialog: FC<typeof Command.Dialog> = (props) => {
 
     setIndex((index) => index - 1);
   });
+
+  useEffect(() => setIndex(0), [page, setIndex]);
 
   return (
     <InputRefContext.Provider value={inputRef}>
