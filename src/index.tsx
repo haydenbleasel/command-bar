@@ -164,7 +164,7 @@ const Dialog: FC<typeof Command.Dialog> = (props) => {
   });
 
   gamepadEvents.on('b', () => {
-    if (typeof window === 'undefined' || !open) {
+    if (typeof window === 'undefined' || !open || !page) {
       return;
     }
 
