@@ -1,6 +1,6 @@
 {
   "name": "@haydenbleasel/command-bar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A pre-configured cmdk instance with hooks, keyboard shortcuts, Gamepad support and animations.",
   "files": [
     "dist"
