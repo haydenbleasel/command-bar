@@ -7,6 +7,12 @@
 - Gamepad support
 - Subtle pop animation + automatic input re-focusing when changing page
 
+## Installation
+
+```bash
+yarn add @haydenbleasel/command-bar
+```
+
 ## Usage
 
 You can use `command-bar` the same way you would use `cmdk`, with a few additions:
@@ -24,11 +30,12 @@ const App = () => {
         <CommandBar.List>
           <CommandBar.Empty>Empty State</CommandBar.Empty>
           <CommandBar.Loading />
-          <CommandBar.Group>
-            <CommandBar.Item>Item</CommandBar.Item>
-            <CommandBar.Separator>
-            <CommandBar.Item>Item</CommandBar.Item>
-          </CommandBar.Group>
+          <Command.Group heading="Letters">
+            <Command.Item>a</Command.Item>
+            <Command.Item>b</Command.Item>
+            <Command.Separator />
+            <Command.Item>c</Command.Item>
+          </Command.Group>
         </CommandBar.List>
       </CommandBar.Container>
     </CommandBar.Dialog>

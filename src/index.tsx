@@ -189,7 +189,7 @@ const Dialog: FC<typeof Command.Dialog> = (props) => {
   );
 };
 
-const CommandBar = {
+export const CommandBar = {
   Dialog,
   Container,
   Input,
@@ -200,10 +200,3 @@ const CommandBar = {
   Loading: Command.Loading,
   Separator: Command.Separator,
 };
-
-const exports = {
-  useCommandBar,
-  CommandBar,
-};
-
-export default exports;
