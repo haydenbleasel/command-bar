@@ -1,6 +1,6 @@
 import { useKeyboardEvent } from '@react-hookz/web';
 import { Command } from 'cmdk';
-import type { FC, HTMLProps, RefObject } from 'react';
+import type { ComponentProps, FC, HTMLProps, RefObject } from 'react';
 import { createContext, useContext, useEffect, useRef } from 'react';
 import create from 'zustand';
 import useGamepadEvents from '@haydenbleasel/use-gamepad-events';
@@ -72,7 +72,7 @@ export const useCommandBar = create<{
 
 const InputRefContext = createContext<RefObject<HTMLInputElement> | null>(null);
 
-const Input: FC<typeof Command.Input> = (props) => {
+const Input: FC<ComponentProps<typeof Command.Input>> = (props) => {
   const { search, setSearch, page } = useCommandBar();
   const inputRef = useContext(InputRefContext);
 
@@ -106,7 +106,7 @@ const Container: FC<HTMLProps<HTMLDivElement>> = (props) => {
   return <div ref={dialogRef} {...props} />;
 };
 
-const Dialog: FC<typeof Command.Dialog> = (props) => {
+const Dialog: FC<ComponentProps<typeof Command.Dialog>> = (props) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const gamepadEvents = useGamepadEvents();
   const {
