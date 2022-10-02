@@ -30,12 +30,12 @@ const App = () => {
         <CommandBar.List>
           <CommandBar.Empty>Empty State</CommandBar.Empty>
           <CommandBar.Loading />
-          <Command.Group heading="Letters">
-            <Command.Item>a</Command.Item>
-            <Command.Item>b</Command.Item>
-            <Command.Separator />
-            <Command.Item>c</Command.Item>
-          </Command.Group>
+          <CommandBar.Group heading="Letters">
+            <CommandBar.Item>a</CommandBar.Item>
+            <CommandBar.Item>b</CommandBar.Item>
+            <CommandBar.Separator />
+            <CommandBar.Item>c</CommandBar.Item>
+          </CommandBar.Group>
         </CommandBar.List>
       </CommandBar.Container>
     </CommandBar.Dialog>
