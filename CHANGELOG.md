@@ -1,3 +1,15 @@
+# v1.0.5 (Sun Oct 02 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Fix typos ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.4 (Sat Oct 01 2022)
 
 #### ⚠️ Pushed to `main`
