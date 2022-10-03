@@ -1,3 +1,16 @@
+# v1.0.7 (Mon Oct 03 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update README.md ([@haydenbleasel](https://github.com/haydenbleasel))
+- Close command bar when clicking overlay ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.6 (Mon Oct 03 2022)
 
 #### ⚠️ Pushed to `main`
