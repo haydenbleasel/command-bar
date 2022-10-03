@@ -1,6 +1,13 @@
 import { useKeyboardEvent } from '@react-hookz/web';
 import { Command } from 'cmdk';
-import type { ComponentProps, FC, HTMLProps, RefObject } from 'react';
+import type {
+  ComponentProps,
+  FC,
+  HTMLProps,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  RefObject,
+} from 'react';
 import { createContext, useContext, useEffect, useRef } from 'react';
 import create from 'zustand';
 import useGamepadEvents from '@haydenbleasel/use-gamepad-events';
@@ -91,6 +98,12 @@ const Container: FC<HTMLProps<HTMLDivElement>> = (props) => {
   const dialogRef = useRef<HTMLDivElement>(null);
   const { setSearch, page } = useCommandBar();
   const inputRef = useContext(InputRefContext);
+  const handleClick: MouseEventHandler = (event) => {
+    event.stopPropagation();
+  };
+  const handleKeyDown: KeyboardEventHandler = (event) => {
+    event.stopPropagation();
+  };
 
   useEffect(() => {
     inputRef?.current?.focus();
@@ -103,7 +116,16 @@ const Container: FC<HTMLProps<HTMLDivElement>> = (props) => {
     }, 100);
   }, [inputRef, page, setSearch]);
 
-  return <div ref={dialogRef} {...props} />;
+  return (
+    <div
+      tabIndex={-1}
+      onKeyDown={handleKeyDown}
+      role="button"
+      onClick={handleClick}
+      ref={dialogRef}
+      {...props}
+    />
+  );
 };
 
 const Dialog: FC<ComponentProps<typeof Command.Dialog>> = (props) => {
@@ -189,6 +211,7 @@ const Dialog: FC<ComponentProps<typeof Command.Dialog>> = (props) => {
         open={open}
         onOpenChange={toggleOpen}
         label="Global Command Menu"
+        onClick={() => toggleOpen(false)}
         {...props}
       />
     </InputRefContext.Provider>
