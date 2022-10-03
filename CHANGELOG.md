@@ -1,3 +1,15 @@
+# v1.0.6 (Mon Oct 03 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Add Tailwind classes ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.5 (Sun Oct 02 2022)
 
 #### ⚠️ Pushed to `main`
