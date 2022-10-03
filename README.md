@@ -6,6 +6,7 @@
 - Predefined keyboard shortcuts
 - Gamepad support
 - Subtle pop animation + automatic input re-focusing when changing page
+- Closes when you click outside of it
 
 ## Installation
 
