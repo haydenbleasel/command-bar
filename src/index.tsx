@@ -98,12 +98,6 @@ const Container: FC<HTMLProps<HTMLDivElement>> = (props) => {
   const dialogRef = useRef<HTMLDivElement>(null);
   const { setSearch, page } = useCommandBar();
   const inputRef = useContext(InputRefContext);
-  const handleClick: MouseEventHandler = (event) => {
-    event.stopPropagation();
-  };
-  const handleKeyDown: KeyboardEventHandler = (event) => {
-    event.stopPropagation();
-  };
 
   useEffect(() => {
     inputRef?.current?.focus();
@@ -116,20 +110,12 @@ const Container: FC<HTMLProps<HTMLDivElement>> = (props) => {
     }, 100);
   }, [inputRef, page, setSearch]);
 
-  return (
-    <div
-      tabIndex={-1}
-      onKeyDown={handleKeyDown}
-      role="button"
-      onClick={handleClick}
-      ref={dialogRef}
-      {...props}
-    />
-  );
+  return <div tabIndex={-1} role="button" ref={dialogRef} {...props} />;
 };
 
 const Dialog: FC<ComponentProps<typeof Command.Dialog>> = (props) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const gamepadEvents = useGamepadEvents();
   const {
     open,
@@ -203,6 +189,12 @@ const Dialog: FC<ComponentProps<typeof Command.Dialog>> = (props) => {
 
   useEffect(() => setIndex(0), [page, setIndex]);
 
+  const handleClick: MouseEventHandler<HTMLDivElement> = (event) => {
+    if (event.target === dialogRef.current) {
+      toggleOpen(false);
+    }
+  };
+
   return (
     <InputRefContext.Provider value={inputRef}>
       <Command.Dialog
@@ -211,7 +203,8 @@ const Dialog: FC<ComponentProps<typeof Command.Dialog>> = (props) => {
         open={open}
         onOpenChange={toggleOpen}
         label="Global Command Menu"
-        onClick={() => toggleOpen(false)}
+        onClick={handleClick}
+        ref={dialogRef}
         {...props}
       />
     </InputRefContext.Provider>
