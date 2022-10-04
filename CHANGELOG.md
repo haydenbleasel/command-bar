@@ -1,3 +1,15 @@
+# v1.0.8 (Tue Oct 04 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Fix click-outside functionality ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### Authors: 1
+
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.7 (Mon Oct 03 2022)
 
 #### ⚠️ Pushed to `main`
