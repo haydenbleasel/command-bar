@@ -353,9 +353,9 @@
     stylelint-config-standard "^26.0.0"
 
 "@haydenbleasel/use-gamepad-events@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@haydenbleasel/use-gamepad-events/-/use-gamepad-events-1.0.2.tgz#ab9bec3251b2397e8aa75e9571002e05dab3e3f1"
-  integrity sha512-gW83dZ1Cx2FOZ5XskZCfgNN9DT0LqXSDNyo808Ni5wZj9BgdV35nKKHHS0jIUfQ7MNOZSqjGm+ZcCOvBS/RMnA==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@haydenbleasel/use-gamepad-events/-/use-gamepad-events-1.0.3.tgz#0f639b9fe9334f90da2c0490041b8a360f78d1de"
+  integrity sha512-iFCLj10L3CG0neaBIM6SHQ97QXPXrbASPHOA3nzLWF7iEKBzPs0t0tSAxbUUSgrNOzgsZNjZ6LBJwrjK/auyrw==
   dependencies:
     "@react-hookz/web" "^15.1.0"
 
