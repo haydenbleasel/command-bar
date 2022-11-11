@@ -4,7 +4,6 @@ import type {
   ComponentProps,
   FC,
   HTMLProps,
-  KeyboardEventHandler,
   MouseEventHandler,
   RefObject,
 } from 'react';
