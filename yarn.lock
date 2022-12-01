@@ -801,6 +801,13 @@
   dependencies:
     "@react-hookz/deep-equal" "^1.0.3"
 
+"@react-hookz/web@^19.2.0":
+  version "19.2.0"
+  resolved "https://registry.yarnpkg.com/@react-hookz/web/-/web-19.2.0.tgz#be5e7cbd2cee69830e0d7d2750dbb23698f1a6c4"
+  integrity sha512-6DbL4FjqmjpHsfNAqmduDoseIg6ciDBv/AIaxDJldMl0GR77g6/fxU8dpXDT/E43FYTLepjt8K0TbyAoXZeOHQ==
+  dependencies:
+    "@react-hookz/deep-equal" "^1.0.3"
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.44"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.44.tgz#0a0aa3bf4a155a678418527342a3ee84bd8caa5c"

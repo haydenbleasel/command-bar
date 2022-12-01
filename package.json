@@ -69,7 +69,7 @@
   },
   "dependencies": {
     "@haydenbleasel/use-gamepad-events": "^1.0.5",
-    "@react-hookz/web": "^18.0.1",
+    "@react-hookz/web": "^19.2.0",
     "cmdk": "^0.1.20",
     "zustand": "^4.1.4"
   },
